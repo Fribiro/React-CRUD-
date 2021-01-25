@@ -25,10 +25,10 @@ class Home extends React.Component {
 
         axios.get('http://localhost/save.php').then(res => 
         {
+        console.log(res.data)
         
         this.setState({data: res.data});
            }); 
-        
         }
     
  

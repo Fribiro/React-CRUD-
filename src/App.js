@@ -8,14 +8,16 @@ import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import AddUser from './AddUser';
 import Home from './Home';
 import Header from './Header';
+import ViewUser from './ViewUser';
+import UpdateUser from './UpdateUser';
+import DeleteUser from './DeleteUser';
+
 
 //bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-//Impoert axios services
+//Import axios services
 import axios from 'axios';
-
-
 
 class App extends React.Component {
   
@@ -25,7 +27,7 @@ class App extends React.Component {
     return (
       <Router>
       <div className="maincontainer">
-        <Header></Header>
+        <Header/>
         
 
         <Switch>
@@ -33,8 +35,11 @@ class App extends React.Component {
             
             <Route exact path='/adduser' component={AddUser} />
             <Route exact path='/home' component={Home} />
-            <Route exact path='' component={Home} />
-           
+            <Route exact path='/' component={Home} />
+            <Route exact path='/viewuser' component={ViewUser} />
+            <Route exact path='/updateuser' component={UpdateUser} />
+            <Route exact path='/deleteuser' component={DeleteUser} />
+            
           </Switch>
             
       
